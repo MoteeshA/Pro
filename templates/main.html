@@ -3,9 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Beautiful Website with Animations</title>
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f7;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Gradient Backgrounds */
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        }
+
+        .cta-bg {
+            background: linear-gradient(135deg, #0071e3, #005bb5);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 3rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0071e3;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            font-size: 1rem;
+            padding: 0.5rem;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0071e3;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://www.apple.com/v/macbook-air/c/images/overview/hero_endframe__ea0qze85eyi6_large.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .cta-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #ff6a6a, #ffcc70);
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .hero .cta-btn:hover {
+            background: linear-gradient(135deg, #ff3b3b, #ffb347);
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            padding: 3rem;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .product-showcase h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0071e3;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-grid .product {
+            background-color: white;
+            padding: 1.5rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-grid .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-grid .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-grid .product h3 {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .product-grid .product p {
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        footer ul li {
+            margin: 0 1rem;
+        }
+
+        footer ul li a {
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">SRI SAI GANESH MARKETING</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero gradient-bg" id="home">
+        <div data-aos="fade-up">
+            <h1>Purity You Can Trust, Health You Can Feel.</h1>
+            <p>Discover cutting-edge products designed for you.</p>
+            <a href="#products" class="cta-btn">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <h2 data-aos="fade-right">Our Products</h2>
+        <div class="product-grid">
+            <div class="product" data-aos="zoom-in">
+                <img src="https://via.placeholder.com/300" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>High-performance design in every detail.</p>
+            </div>
+            <div class="product" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://via.placeholder.com/300" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Designed for seamless experiences.</p>
+            </div>
+            <div class="product" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://via.placeholder.com/300" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Innovation meets elegance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <p>&copy; 2030 Sri Sai Ganesh Marketing. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration (in ms)
+            offset: 100,    // Trigger animations 100px before reaching elements
+            once: true      // Animations happen only once
+        });
+    </script>
 </body>
 </html>
