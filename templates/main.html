@@ -48,7 +48,7 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #0071e3;
+            color: #0071e3; /* Orange color */
         }
 
         nav ul {
@@ -159,6 +159,41 @@
             color: #777;
         }
 
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 4rem 2rem;
+            background-color: #0071e3;
+            color: white;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-choose-us .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .why-choose-us .feature {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .why-choose-us .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-choose-us .feature p {
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+
         /* Footer */
         footer {
             background-color: #333;
@@ -206,8 +241,8 @@
     <!-- Hero Section -->
     <section class="hero gradient-bg" id="home">
         <div data-aos="fade-up">
-            <h1>Purity You Can Trust, Health You Can Feel.</h1>
-            <p>Discover cutting-edge products designed for you.</p>
+            <h1>Grow With Sai Ganesh Marketing</h1>
+            <p style="color: #feb47b;">Discover tailor made marketing strategies just for you.</p>
             <a href="#products" class="cta-btn">Explore Products</a>
         </div>
     </section>
@@ -234,24 +269,44 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-        <p>&copy; 2090 Sri Sai Ganesh Marketing. All rights reserved.</p>
-    </footer>
-
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000, // Animation duration (in ms)
-            offset: 100,    // Trigger animations 100px before reaching elements
-            once: true      // Animations happen only once
-        });
-    </script>
-</body>
-</html>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="why-choose-us">
+        <h2 data-aos="fade-up">Why Choose Us?</h2>
+        <div class="features">
+            <div class="feature" data-aos="fade-right">
+                <h3>Top Quality Marketing</h3>
+                <p>We offer Marketing Solutions that make you stand out.</p>
+            </div>
+            <div class="feature" data-aos="fade-up">
+                <h3>Customer Satisfaction</h3>
+                <p>Our commitment to customer service ensures that you're always our top priority.</p>
+            </div>
+            <div class="feature" data-aos="fade-left">
+                <h3>Affordable Pricing</h3>
+                    <p>We believe in offering the best value for your investment, without compromising on quality.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <p>&copy; 2024 Sri Sai Ganesh Marketing. All rights reserved.</p>
+        </footer>
+    
+        <!-- AOS JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000, // Animation duration (in ms)
+                offset: 100,    // Trigger animations 100px before reaching elements
+                once: true      // Animations happen only once
+            });
+        </script>
+    </body>
+    </html>
+    
