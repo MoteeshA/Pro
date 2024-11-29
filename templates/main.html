@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Website with Animations</title>
+    <title>Sri Sai Ganesh Marketing</title>
 
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
@@ -26,11 +26,7 @@
 
         /* Gradient Backgrounds */
         .gradient-bg {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-        }
-
-        .cta-bg {
-            background: linear-gradient(135deg, #0071e3, #005bb5);
+            background: linear-gradient(135deg, #6ec1e4, #a8e0ff);
         }
 
         /* Navigation Bar */
@@ -38,6 +34,7 @@
             background-color: #fff;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 1rem 3rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -45,10 +42,21 @@
             z-index: 1000;
         }
 
+        nav .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
         nav .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav .brand-name {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #000000; /* Orange color */
+            color: #007ea7;
         }
 
         nav ul {
@@ -68,13 +76,13 @@
         }
 
         nav ul li a:hover {
-            color: #0071e3;
+            color: #007ea7;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background-image: url('https://www.apple.com/v/macbook-air/c/images/overview/hero_endframe__ea0qze85eyi6_large.jpg');
+            background-image: url('https://via.placeholder.com/1500x800?text=Water+Purifiers');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -89,7 +97,7 @@
             font-size: 4rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            background: linear-gradient(90deg, #6ec1e4, #a8e0ff);
             -webkit-background-clip: text;
             color: transparent;
         }
@@ -101,7 +109,7 @@
 
         .hero .cta-btn {
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #ff6a6a, #ffcc70);
+            background: linear-gradient(135deg, #4fc3f7, #81d4fa);
             color: white;
             border-radius: 50px;
             font-size: 1.2rem;
@@ -109,89 +117,127 @@
         }
 
         .hero .cta-btn:hover {
-            background: linear-gradient(135deg, #ff3b3b, #ffb347);
+            background: linear-gradient(135deg, #007ea7, #33bfff);
         }
 
-        /* Product Showcase */
-        .product-showcase {
-            padding: 3rem;
+        /* Products Section */
+        .products {
+            padding: 4rem 2rem;
             text-align: center;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
 
-        .product-showcase h2 {
+        .products h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #0071e3;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .product-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .product-grid .product {
-            background-color: white;
-            padding: 1.5rem;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        .product-card {
+            background-color: #f9f9f9;
             border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1.5rem;
+            width: 300px;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .product-grid .product:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .product-grid .product img {
-            max-width: 100%;
+        .product-card img {
+            width: 100%;
+            height: auto;
             border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
-        .product-grid .product h3 {
-            margin: 1rem 0 0.5rem 0;
+        .product-card h3 {
             font-size: 1.5rem;
-            color: #333;
+            color: #007ea7;
+            margin-bottom: 1rem;
         }
 
-        .product-grid .product p {
-            color: #777;
+        .product-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
         }
 
-        /* Why Choose Us Section */
-        .why-choose-us {
+        .product-card .cta-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #4fc3f7, #81d4fa);
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card:hover .cta-btn {
+            background: linear-gradient(135deg, #007ea7, #33bfff);
+        }
+
+        /* Contact Us Section */
+        .contact {
             padding: 4rem 2rem;
-            background-color: #0071e3;
+            background: linear-gradient(135deg, #007ea7, #33bfff);
             color: white;
             text-align: center;
         }
 
-        .why-choose-us h2 {
+        .contact h2 {
             font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .why-choose-us .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .why-choose-us .feature {
-            max-width: 300px;
-            text-align: center;
-        }
-
-        .why-choose-us .feature h3 {
-            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .why-choose-us .feature p {
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact form input, .contact form textarea, .contact form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
             font-size: 1rem;
-            color: #e0e0e0;
+        }
+
+        .contact form input:focus, .contact form textarea:focus {
+            outline: none;
+            border-color: #007ea7;
+        }
+
+        .contact form button {
+            background-color: #007ea7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .contact form button:hover {
+            background-color: #005f7f;
         }
 
         /* Footer */
@@ -223,90 +269,307 @@
             font-size: 0.9rem;
             color: #999;
         }
+
+        /* Chatbot Styles */
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007ea7;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 2rem;
+        }
+
+        .chatbot-box {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            display: none;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .chatbot-box header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #007ea7;
+        }
+
+        .chatbot-box .messages {
+            flex-grow: 1;
+            padding-bottom: 10px;
+            overflow-y: auto;
+        }
+
+        .chatbot-box .messages .message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .chatbot-box .messages .message.bot {
+            background-color: #e0f7fa;
+        }
+
+        .chatbot-box .messages .message.user {
+            background-color: #b3e5fc;
+            align-self: flex-end;
+        }
+
+        .chatbot-box input {
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 80%;
+            margin-right: 10px;
+        }
+
+        .chatbot-box button {
+            padding: 10px;
+            background-color: #007ea7;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+
+                /* Service Section */
+                .service {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .service h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .service .cta-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #4fc3f7, #81d4fa);
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .service .cta-btn:hover {
+            background: linear-gradient(135deg, #007ea7, #33bfff);
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">SRI SAI GANESH MARKETING</div>
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/50" alt="Logo" class="logo">
+            <span class="brand-name">Sri Sai Ganesh Marketing</span>
+        </div>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#products">Products</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero gradient-bg" id="home">
-        <div data-aos="fade-up">
-            <h1>Grow With Sai Ganesh Marketing</h1>
-            <p style="color: #feb47b;">Discover tailor made marketing strategies just for you.</p>
-            <a href="#products" class="cta-btn">Explore Products</a>
+    <section class="hero">
+        <div>
+            <h1>Your Trusted Source for Water Purifiers</h1>
+            <p>Pure water, pure life. Discover the best water purifiers for your home and office needs.</p>
+            <a href="#products" class="cta-btn">Shop Now</a>
         </div>
     </section>
 
-    <!-- Product Showcase -->
-    <section class="product-showcase" id="products">
-        <h2 data-aos="fade-right">Our Products</h2>
-        <div class="product-grid">
-            <div class="product" data-aos="zoom-in">
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Bestselling Products</h2>
+        <div class="product-cards">
+            <!-- Product Card 1 -->
+            <div class="product-card" data-aos="fade-up">
                 <img src="https://via.placeholder.com/300" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>High-performance design in every detail.</p>
+                <h3>Advanced Water Purifier</h3>
+                <p>Compact and efficient, perfect for home use.</p>
+                <a href="buy.html" class="cta-btn">Buy Now</a>
             </div>
-            <div class="product" data-aos="zoom-in" data-aos-delay="200">
+            <!-- Product Card 2 -->
+            <div class="product-card" data-aos="fade-up">
                 <img src="https://via.placeholder.com/300" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Designed for seamless experiences.</p>
-            </div>
-            <div class="product" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://via.placeholder.com/300" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Innovation meets elegance.</p>
+                <h3>Office Water Purifier</h3>
+                <p>Designed for large spaces with high water demands.</p>
+                <a href="buy.html" class="cta-btn">Buy Now</a>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us" id="why-choose-us">
-        <h2 data-aos="fade-up">Why Choose Us?</h2>
-        <div class="features">
-            <div class="feature" data-aos="fade-right">
-                <h3>Top Quality Marketing</h3>
-                <p>We offer Marketing Solutions that make you stand out.</p>
-            </div>
-            <div class="feature" data-aos="fade-up">
-                <h3>Customer Satisfaction</h3>
-                <p>Our commitment to customer service ensures that you're always our top priority.</p>
-            </div>
-            <div class="feature" data-aos="fade-left">
-                <h3>Affordable Pricing</h3>
-                    <p>We believe in offering the best value for your investment, without compromising on quality.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Service Section -->
+    <section id="service" class="service">
+        <h2>Our Services</h2>
+        <p>We offer installation, maintenance, and repair services for all our water purifiers. Get expert assistance today!</p>
+        <a href="#contact" class="cta-btn">Contact Us for Service</a>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Feel free to reach out to us!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="email" placeholder=" Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <p>&copy; 2024 Sri Sai Ganesh Marketing. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot" onclick="toggleChatbot()">
+        <span>💬</span>
+    </div>
+
+    <div class="chatbot-box" id="chatbotBox">
+        <header>Chat with Us</header>
+        <div class="messages" id="chatMessages">
+            <div class="message bot">Hello! How can I assist you today?</div>
+        </div>
+        <input type="text" id="userMessage" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Chatbot Functionality
+        function toggleChatbot() {
+            const chatbotBox = document.getElementById('chatbotBox');
+            chatbotBox.style.display = chatbotBox.style.display === 'none' || chatbotBox.style.display === '' ? 'flex' : 'none';
+        }
     
-        <!-- Footer -->
-        <footer>
-            <ul>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            <p>&copy; 2024 Sri Sai Ganesh Marketing. All rights reserved.</p>
-        </footer>
+        function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            if (userMessage.trim() !== "") {
+                const messageContainer = document.getElementById('chatMessages');
+                const userMessageElem = document.createElement('div');
+                userMessageElem.classList.add('message', 'user');
+                userMessageElem.textContent = userMessage;
+                messageContainer.appendChild(userMessageElem);
+                document.getElementById('userMessage').value = '';
     
-        <!-- AOS JS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000, // Animation duration (in ms)
-                offset: 100,    // Trigger animations 100px before reaching elements
-                once: true      // Animations happen only once
-            });
-        </script>
-    </body>
-    </html>
+                // Simulating bot reply based on user message
+                setTimeout(() => {
+                    const botReply = document.createElement('div');
+                    botReply.classList.add('message', 'bot');
+                    
+                    // Check user message and respond accordingly
+                    if (userMessage.toLowerCase().includes("water purifiers")) {
+                        botReply.textContent = "We offer a wide selection of water purifiers. We have compact models for home use and larger systems for offices. Would you like to see our bestsellers?";
+                    } else if (userMessage.toLowerCase().includes("products")) {
+                        botReply.textContent = "Our product range includes water purifiers, filters, and accessories. Would you like to know about the features of our most popular models?";
+                    } else if (userMessage.toLowerCase().includes("buy now")) {
+                        botReply.textContent = "You can find the 'Buy Now' button on each product's page. Just click it to make a purchase.";
+                    } else if (userMessage.toLowerCase().includes("contact")) {
+                        botReply.textContent = "You can contact us via the form on our 'Contact Us' page, or you can reach us at support@ourcompany.com for immediate assistance.";
+                    } else if (userMessage.toLowerCase().includes("how to buy")) {
+                        botReply.textContent = "To buy a water purifier, simply browse our products, select the model you like, and click on the 'Buy Now' button. We offer secure payment options.";
+                    } else if (userMessage.toLowerCase().includes("delivery")) {
+                        botReply.textContent = "We offer free delivery on all orders within the city. Delivery usually takes 3-5 business days. Would you like to know about our delivery options?";
+                    } else if (userMessage.toLowerCase().includes("payment methods")) {
+                        botReply.textContent = "We accept all major credit cards, debit cards, and PayPal. Your payment is secure and processed through our trusted partners.";
+                    } else if (userMessage.toLowerCase().includes("warranty")) {
+                        botReply.textContent = "Our water purifiers come with a 1-year warranty, which covers all manufacturing defects. For further details, please check the warranty terms on our product page.";
+                    } else if (userMessage.toLowerCase().includes("hello")) {
+                        botReply.textContent = "Hello! How can I assist you today? Feel free to ask about our water purifiers or anything else!";
+                    } else if (userMessage.toLowerCase().includes("hello bot")) {
+                        botReply.textContent = "Hi there! How can I help you today? Ask me about our water purifiers or any product-related inquiries.";
+                    } else if (userMessage.toLowerCase().includes("reviews")) {
+                        botReply.textContent = "Our customers love our water purifiers! You can read reviews on each product page to learn more about what others are saying.";
+                    } else if (userMessage.toLowerCase().includes("features")) {
+                        botReply.textContent = "Our water purifiers feature advanced filtration systems, easy-to-use controls, and energy-efficient designs. Would you like to explore the features of a specific model?";
+                    } else if (userMessage.toLowerCase().includes("discount")) {
+                        botReply.textContent = "We have great discounts running on select models. Check out our 'Offers' section or subscribe to our newsletter for exclusive deals.";
+                    } else if (userMessage.toLowerCase().includes("stock")) {
+                        botReply.textContent = "All our water purifiers are in stock! If you're interested in a specific model, let me know, and I can provide more details.";
+                    } else if (userMessage.toLowerCase().includes("models")) {
+                        botReply.textContent = "We have various models, including compact tabletop units and large-scale filtration systems. Would you like to compare them?";
+                    } else if (userMessage.toLowerCase().includes("thank you")) {
+                        botReply.textContent = "You're welcome! Let me know if you have any more questions.";
+                    } else if (userMessage.toLowerCase().includes("returns")) {
+                        botReply.textContent = "We offer a 30-day return policy for most products. Please ensure the product is in its original condition. For more information, check our 'Returns & Exchanges' page.";
+                    } else if (userMessage.toLowerCase().includes("shipping")) {
+                        botReply.textContent = "Shipping is free on all orders above $50. For orders under $50, a small shipping fee may apply. You can track your order once it's shipped.";
+                    } else if (userMessage.toLowerCase().includes("international shipping")) {
+                        botReply.textContent = "We currently offer international shipping to select countries. Please check our 'Shipping Info' page for a list of countries we ship to.";
+                    } else if (userMessage.toLowerCase().includes("support")) {
+                        botReply.textContent = "For technical support or troubleshooting, please visit our 'Support' section or contact our team via email at support@ourcompany.com.";
+                    } else if (userMessage.toLowerCase().includes("dealers")) {
+                        botReply.textContent = "We have authorized dealers in various cities. Please check our 'Find a Dealer' page to locate the nearest one.";
+                    } else if (userMessage.toLowerCase().includes("showroom")) {
+                        botReply.textContent = "We have showrooms in several locations. Please visit our 'Store Locator' page to find the nearest showroom.";
+                    } else if (userMessage.toLowerCase().includes("live demo")) {
+                        botReply.textContent = "We offer live demos of our products in select locations. Would you like to book an appointment for a live demo?";
+                    } else if (userMessage.toLowerCase().includes("installation")) {
+                        botReply.textContent = "We offer free installation with every purchase of a water purifier. Our technicians will contact you to schedule a convenient time.";
+                    } else if (userMessage.toLowerCase().includes("filters")) {
+                        botReply.textContent = "We offer high-quality filters for our purifiers. You can find replacement filters on each product page.";
+                    } else if (userMessage.toLowerCase().includes("accessories")) {
+                        botReply.textContent = "We also offer various accessories such as filter cartridges, water tanks, and more. Check out our 'Accessories' section for details.";
+                    } else if (userMessage.toLowerCase().includes("features comparison")) {
+                        botReply.textContent = "We have a comparison tool available on the website to compare different purifier models based on features, price, and customer ratings. Would you like me to assist you with that?";
+                    } else if (userMessage.toLowerCase().includes("catalog")) {
+                        botReply.textContent = "You can view our product catalog online, which includes all our available water purifiers, filters, and accessories. Would you like the link to the catalog?";
+                    } else if (userMessage.toLowerCase().includes("corporate orders")) {
+                        botReply.textContent = "For corporate or bulk orders, please visit our 'Corporate Sales' page or contact our sales team for a customized quote.";
+                    } else {
+                        botReply.textContent = "Thank you for your message. We'll get back to you shortly!";
+                    }
     
+                    messageContainer.appendChild(botReply);
+                    messageContainer.scrollTop = messageContainer.scrollHeight; // Scroll to the bottom
+                }, 1000);
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+</body>
+</html>
