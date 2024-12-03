@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Container for centering the content */
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        /* Slide up animation for the container */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2.5rem;
+            color: #007BFF; /* Blue color */
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        /* Slide-in animation for the heading */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Paragraph styling for error message */
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.4s ease-in-out;
+        }
+
+        /* Fade-in up animation for the paragraph */
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Button styling for returning to home */
+        .button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            background-color: #007BFF; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #0056b3; /* Darker blue */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Error occurred while processing your order</h1>
+        <p>Error: {{ error_message }}</p>
+        <a href="/" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
